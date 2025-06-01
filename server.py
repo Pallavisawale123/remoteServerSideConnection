@@ -46,7 +46,7 @@ with SimpleXMLRPCServer(
     server.register_function(file_util.get_sha256)
     server.register_function(file_util.delete_file)
     server.register_function(file_util.is_file_exists)
-    server.register_function(check_connection, 'check_connection')
+    server.register_function(check_connection)
 
     logging.info("Starting server on %s:%d", SERVER_HOST, SERVER_PORT)
     server.serve_forever()
